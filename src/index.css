@@ -1,0 +1,267 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Luxury editorial color palette inspired by design brief: dark sophistication with warm metallics and sage accents */
+
+  /* Backgrounds: Deep, sophisticated dark tones */
+  --background: oklch(0.07 0.006 300);
+  --foreground: oklch(0.95 0.002 300);
+
+  --card: oklch(0.12 0.008 300);
+  --card-foreground: oklch(0.95 0.002 300);
+
+  --popover: oklch(0.1 0.006 300);
+  --popover-foreground: oklch(0.95 0.002 300);
+
+  /* Primary: Warm taupe/beige for premium editorial feel */
+  --primary: oklch(0.85 0.04 65);
+  --primary-foreground: oklch(0.12 0.008 300);
+
+  /* Accent: Sage green - luxury editorial touch */
+  --accent: oklch(0.6 0.09 155);
+  --accent-foreground: oklch(0.98 0.001 300);
+
+  --secondary: oklch(0.78 0.035 50);
+  --secondary-foreground: oklch(0.12 0.008 300);
+
+  --muted: oklch(0.25 0.006 300);
+  --muted-foreground: oklch(0.68 0.003 300);
+
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.98 0.001 300);
+
+  --border: oklch(0.18 0.008 300);
+  --input: oklch(0.16 0.008 300);
+  --ring: oklch(0.6 0.09 155);
+
+  /* Chart colors for visual hierarchy */
+  --chart-1: oklch(0.6 0.09 155);
+  --chart-2: oklch(0.85 0.04 65);
+  --chart-3: oklch(0.75 0.08 280);
+  --chart-4: oklch(0.7 0.1 180);
+  --chart-5: oklch(0.8 0.08 60);
+
+  --radius: 0.5rem;
+
+  --sidebar: oklch(0.1 0.006 300);
+  --sidebar-foreground: oklch(0.95 0.002 300);
+  --sidebar-primary: oklch(0.85 0.04 65);
+  --sidebar-primary-foreground: oklch(0.12 0.008 300);
+  --sidebar-accent: oklch(0.6 0.09 155);
+  --sidebar-accent-foreground: oklch(0.12 0.008 300);
+  --sidebar-border: oklch(0.18 0.008 300);
+  --sidebar-ring: oklch(0.6 0.09 155);
+}
+
+.dark {
+  --background: oklch(0.07 0.006 300);
+  --foreground: oklch(0.95 0.002 300);
+  --card: oklch(0.12 0.008 300);
+  --card-foreground: oklch(0.95 0.002 300);
+  --popover: oklch(0.1 0.006 300);
+  --popover-foreground: oklch(0.95 0.002 300);
+  --primary: oklch(0.85 0.04 65);
+  --primary-foreground: oklch(0.12 0.008 300);
+  --secondary: oklch(0.78 0.035 50);
+  --secondary-foreground: oklch(0.12 0.008 300);
+  --muted: oklch(0.25 0.006 300);
+  --muted-foreground: oklch(0.68 0.003 300);
+  --accent: oklch(0.6 0.09 155);
+  --accent-foreground: oklch(0.12 0.008 300);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.18 0.008 300);
+  --input: oklch(0.16 0.008 300);
+  --ring: oklch(0.6 0.09 155);
+  --chart-1: oklch(0.6 0.09 155);
+  --chart-2: oklch(0.85 0.04 65);
+  --chart-3: oklch(0.75 0.08 280);
+  --chart-4: oklch(0.7 0.1 180);
+  --chart-5: oklch(0.8 0.08 60);
+  --sidebar: oklch(0.1 0.006 300);
+  --sidebar-foreground: oklch(0.95 0.002 300);
+  --sidebar-primary: oklch(0.85 0.04 65);
+  --sidebar-primary-foreground: oklch(0.12 0.008 300);
+  --sidebar-accent: oklch(0.6 0.09 155);
+  --sidebar-accent-foreground: oklch(0.12 0.008 300);
+  --sidebar-border: oklch(0.18 0.008 300);
+  --sidebar-ring: oklch(0.6 0.09 155);
+}
+
+@theme inline {
+  --font-serif: "Playfair Display", "Georgia", serif;
+  --font-sans: "Inter", "Helvetica", sans-serif;
+  --font-mono: "Geist Mono", "Courier New", monospace;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Enhanced editorial typography with luxury feel */
+  h1 {
+    @apply font-serif text-6xl lg:text-7xl font-bold tracking-tighter text-foreground;
+  }
+
+  h2 {
+    @apply font-serif text-4xl lg:text-5xl font-bold tracking-tight text-foreground;
+  }
+
+  h3 {
+    @apply font-serif text-2xl lg:text-3xl font-semibold tracking-tight text-foreground;
+  }
+
+  h4 {
+    @apply font-serif text-xl font-semibold text-foreground;
+  }
+
+  p {
+    @apply text-foreground/90 leading-relaxed;
+  }
+
+  /* Smooth scrolling for narrative experience */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Refined ink texture with luxury dark background */
+  body {
+    background-image: radial-gradient(circle at 20% 50%, rgba(96, 125, 139, 0.02) 1px, transparent 1px),
+      radial-gradient(circle at 80% 80%, rgba(179, 157, 219, 0.015) 2px, transparent 2px);
+    background-size: 50px 50px, 80px 80px;
+    background-attachment: fixed;
+  }
+}
+
+/* Enhanced motion and interaction utilities */
+@layer utilities {
+  .animate-reveal {
+    animation: reveal 0.8s ease-out forwards;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-subtle {
+    animation: pulse-subtle 3s ease-in-out infinite;
+  }
+
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes pulse-subtle {
+
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  .prose-editorial {
+    @apply leading-relaxed font-sans text-lg text-foreground/85;
+  }
+
+  /* Luxury glass effect for cards */
+  .glass-effect {
+    @apply bg-card/40 backdrop-blur-md border border-border;
+  }
+
+  /* Premium text selection */
+  ::selection {
+    @apply bg-accent text-accent-foreground;
+  }
+
+  /* Smooth cursor transitions */
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-accent) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-accent);
+  border-radius: 9999px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
