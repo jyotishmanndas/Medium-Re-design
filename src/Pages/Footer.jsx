@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 const Footer = () => {
     return (
-        <section className="w-full py-32 bg-gradient-to-b from-secondary/50 to-background relative overflow-hidden">
+        <section className="w-full py-32 bg-linear-to-b from-secondary/50 to-background relative overflow-hidden">
             {/* Animated background elements */}
             <div className="absolute inset-0 -z-10">
                 <motion.div
@@ -77,6 +77,24 @@ const Footer = () => {
                     No credit card required. Join free today.
                 </motion.p>
             </div>
+
+            <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                className="absolute bottom-6 right-6 text-sm z-20 font-medium"
+            >
+                <span className="text-muted-foreground">Redesigned by:</span>{" "}
+                <motion.span
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 1.2, delay: 0.2 }}
+                    className="font-semibold text-accent"
+                >
+                    Jyotishman Das
+                </motion.span>
+            </motion.div>
         </section>
     )
 }

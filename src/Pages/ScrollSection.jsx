@@ -88,7 +88,7 @@ const ScrollSection = () => {
                         <motion.div key={idx} className="relative mb-48 last:mb-0" style={{ y: offset }}>
                             {/* Background accent line */}
                             <motion.div
-                                className="absolute -left-20 top-0 bottom-0 w-1 bg-gradient-to-b from-accent/0 via-accent/30 to-accent/0"
+                                className="absolute -left-20 top-0 bottom-0 w-1 bg-linear-to-b from-accent/0 via-accent/30 to-accent/0"
                                 initial={{ scaleY: 0 }}
                                 whileInView={{ scaleY: 1 }}
                                 viewport={{ once: true, margin: "-100px" }}
@@ -191,7 +191,7 @@ const ScrollSection = () => {
 
                             {/* Bottom accent bar */}
                             <motion.div
-                                className={`h-1 bg-gradient-to-r ${section.accent === "accent"
+                                className={`h-1 bg-linear-to-r ${section.accent === "accent"
                                         ? "from-accent to-accent/0"
                                         : section.accent === "primary"
                                             ? "from-primary to-primary/0"

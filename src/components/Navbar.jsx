@@ -72,7 +72,7 @@ const Navbar = () => {
             >
                 <div className="px-6 py-4 flex flex-col gap-4">
                     <Link to="/discover" className="text-foreground hover:text-accent transition-colors">
-                        Discover
+                       Write
                     </Link>
                     <Link to="/community" className="text-foreground hover:text-accent transition-colors">
                         Community
